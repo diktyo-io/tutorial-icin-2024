@@ -35,7 +35,7 @@ subjects:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: network-aware-scheduler
+  name: diktyo-scheduler
   namespace: scheduler-plugins
 spec:
   replicas: 1
@@ -49,8 +49,8 @@ spec:
         component: scheduler
         tier: control-plane
     spec:
-      nodeSelector:
-        kubernetes.io/hostname: "n1.ml.ilabt-imec-be.wall2.ilabt.iminds.be"
+      #nodeSelector:
+        #kubernetes.io/hostname: "n1.ml.ilabt-imec-be.wall2.ilabt.iminds.be"
       containers:
         - image: registry.k8s.io/scheduler-plugins/kube-scheduler:v0.25.7 
           #imagePullPolicy: Never
@@ -60,7 +60,7 @@ spec:
             - --authorization-kubeconfig=/etc/kubernetes/scheduler.conf
             - --config=/etc/kubernetes/sched-cc.yaml
             - -v=9
-          name: network-aware-scheduler
+          name: diktyo-scheduler
           securityContext:
             privileged: true
           volumeMounts:

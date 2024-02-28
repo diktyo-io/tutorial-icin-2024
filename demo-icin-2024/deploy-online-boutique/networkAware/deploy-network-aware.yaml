@@ -15,7 +15,7 @@ spec:
         app: adservice
         appgroup.diktyo.x-k8s.io.workload: adservice
     spec:
-      schedulerName: network-aware-scheduler
+      schedulerName: diktyo-scheduler
       initContainers:
         - name: sfx-instrumentation
           image: quay.io/signalfuse/sfx-zero-config-agent:latest
@@ -98,7 +98,7 @@ spec:
         app: cartservice
         appgroup.diktyo.x-k8s.io.workload: cartservice
     spec:
-      schedulerName: network-aware-scheduler
+      schedulerName: diktyo-scheduler
       containers:
       - name: server
         image: quay.io/signalfuse/microservices-demo-cartservice:433c23881a
@@ -181,7 +181,7 @@ spec:
         app: checkoutservice
         appgroup.diktyo.x-k8s.io.workload: checkoutservice
     spec:
-      schedulerName: network-aware-scheduler
+      schedulerName: diktyo-scheduler
       containers:
         - name: server
           image: quay.io/signalfuse/microservices-demo-checkoutservice:433c23881a
@@ -257,7 +257,7 @@ spec:
         app: currencyservice
         appgroup.diktyo.x-k8s.io.workload: currencyservice
     spec:
-      schedulerName: network-aware-scheduler
+      schedulerName: diktyo-scheduler
       containers:
       - name: server
         image: quay.io/signalfuse/microservices-demo-currencyservice:433c23881a
@@ -318,7 +318,7 @@ spec:
         app: emailservice
         appgroup.diktyo.x-k8s.io.workload: emailservice
     spec:
-      schedulerName: network-aware-scheduler
+      schedulerName: diktyo-scheduler
       containers:
       - name: server
         image: quay.io/signalfuse/microservices-demo-emailservice:433c23881a
@@ -369,7 +369,7 @@ spec:
       annotations:
         sidecar.istio.io/rewriteAppHTTPProbers: "true"
     spec:
-      schedulerName: network-aware-scheduler
+      schedulerName: diktyo-scheduler
       containers:
         - name: server
           image: quay.io/signalfuse/microservices-demo-frontend:433c23881a
@@ -485,7 +485,7 @@ spec:
         app: paymentservice
         appgroup.diktyo.x-k8s.io.workload: paymentservice
     spec:
-      schedulerName: network-aware-scheduler
+      schedulerName: diktyo-scheduler
       containers:
       - name: server
         image: quay.io/signalfuse/microservices-demo-paymentservice:433c23881a
@@ -573,7 +573,7 @@ spec:
         app: productcatalogservice
         appgroup.diktyo.x-k8s.io.workload: productcatalogservice
     spec:
-      schedulerName: network-aware-scheduler
+      schedulerName: diktyo-scheduler
       containers:
       - name: server
         image: quay.io/signalfuse/microservices-demo-productcatalogservice:433c23881a
@@ -633,7 +633,7 @@ spec:
         app: recommendationservice
         appgroup.diktyo.x-k8s.io.workload: recommendationservice
     spec:
-      schedulerName: network-aware-scheduler
+      schedulerName: diktyo-scheduler
       containers:
       - name: server
         image: quay.io/signalfuse/microservices-demo-recommendationservice:433c23881a
@@ -698,7 +698,7 @@ spec:
         app: redis-cart
         appgroup.diktyo.x-k8s.io.workload: redis-cart
     spec:
-      schedulerName: network-aware-scheduler
+      schedulerName: diktyo-scheduler
       containers:
       - name: redis
         image: redis:alpine
@@ -756,7 +756,7 @@ spec:
         app: shippingservice
         appgroup.diktyo.x-k8s.io.workload: shippingservice
     spec:
-      schedulerName: network-aware-scheduler
+      schedulerName: diktyo-scheduler
       containers:
       - name: server
         image: quay.io/signalfuse/microservices-demo-shippingservice:433c23881a

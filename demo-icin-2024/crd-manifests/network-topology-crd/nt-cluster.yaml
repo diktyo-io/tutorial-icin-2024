@@ -2,7 +2,7 @@
 apiVersion: networktopology.diktyo.x-k8s.io/v1alpha1
 kind: NetworkTopology
 metadata:
-  name: net-topology-test
+  name: nt-cluster
   namespace: default
 spec:
   configmapName: "netperf-metrics"

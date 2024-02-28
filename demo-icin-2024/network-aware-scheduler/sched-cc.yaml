@@ -5,7 +5,7 @@ leaderElection:
 clientConnection:
   kubeconfig: "/etc/kubernetes/scheduler.conf"
 profiles:
-  - schedulerName: network-aware-scheduler
+  - schedulerName: diktyo-scheduler
     plugins:
       queueSort:
         enabled:
@@ -34,4 +34,4 @@ profiles:
           namespaces:
             - "default"
           weightsName: "NetperfCosts" # or Dijkstra
-          networkTopologyName: "net-topology-test"
+          networkTopologyName: "nt-cluster"

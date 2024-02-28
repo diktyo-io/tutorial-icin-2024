@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: adservice
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: adservice
@@ -86,7 +86,7 @@ kind: Deployment
 metadata:
   name: cartservice
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: cartservice
@@ -169,7 +169,7 @@ kind: Deployment
 metadata:
   name: checkoutservice
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: checkoutservice
@@ -245,7 +245,7 @@ kind: Deployment
 metadata:
   name: currencyservice
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: currencyservice
@@ -306,7 +306,7 @@ kind: Deployment
 metadata:
   name: emailservice
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: emailservice
@@ -355,7 +355,7 @@ kind: Deployment
 metadata:
   name: frontend
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: frontend
@@ -473,7 +473,7 @@ kind: Deployment
 metadata:
   name: paymentservice
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: paymentservice
@@ -561,7 +561,7 @@ kind: Deployment
 metadata:
   name: productcatalogservice
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: productcatalogservice
@@ -621,7 +621,7 @@ kind: Deployment
 metadata:
   name: recommendationservice
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: recommendationservice
@@ -686,7 +686,7 @@ kind: Deployment
 metadata:
   name: redis-cart
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: redis-cart
@@ -744,7 +744,7 @@ kind: Deployment
 metadata:
   name: shippingservice
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: shippingservice
